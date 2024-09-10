@@ -10,13 +10,8 @@ const App = () => {
 
   useEffect(() => {
     // Cargar preguntas desde el archivo JSON
-    fetch('/questions.json')
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
+    fetch('https://holasoymalva.github.io/meet-me/questions.json')
+      .then((response) => response.json())
       .then((data) => setQuestions(data))
       .catch((error) => console.error('Error al cargar las preguntas:', error));
   }, []);
