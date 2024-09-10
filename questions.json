@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "question": "Si pudieras ser un dulce ¿Cuál serias?"
+  },
+  {
+    "id": 2,
+    "question": "¿Cuál es tu dinosaurio favorito?"
+  },
+  {
+    "id": 3,
+    "question": "¿Qué es una estrella?"
+  },
+  {
+    "id": 4,
+    "question": "Si pudieras ser un color, ¿Con cual te identificarias?"
+  },
+  {
+    "id": 5,
+    "question": "Si tu vida fuera un libro, ¿Como lo llamarias?"
+  },
+  {
+    "id": 6,
+    "question": "¿Qué tienes en tu lista de cosas que hacer antes de morir?"
+  },
+  {
+    "id": 7,
+    "question": "¿Cómo te gusta pasar tu tiempo libre?"
+  },
+  {
+    "id": 8,
+    "question": "¿Quién es tu mayor referente y por qué?"
+  },
+  {
+    "id": 9,
+    "question": "¿Cuál es tu mayor cualidad?"
+  },
+  {
+    "id": 10,
+    "question": "¿Cuál es el lugar que has visitado y al que no quieres volver nunca?"
+  },
+  {
+    "id": 11,
+    "question": "¿Cuál es tu canción de karaoke favorita?"
+  },
+  {
+    "id": 12,
+    "question": "La película que todo el mundo dice que es buenísima pero a ti te parece sobrevalorada."
+  },
+  {
+    "id": 13,
+    "question": "¿Qué harías mañana si ganaras hoy un millón de euros?"
+  },
+  {
+    "id": 14,
+    "question": "Si el dinero y el tiempo no fueran una limitante ¿Qué te gustaria hacer?"
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/meet-me/static/css/main.0a3220c4.css",
+    "main.js": "/meet-me/static/js/main.f7c5af3a.js",
+    "static/js/453.82ca1be9.chunk.js": "/meet-me/static/js/453.82ca1be9.chunk.js",
+    "index.html": "/meet-me/index.html",
+    "main.0a3220c4.css.map": "/meet-me/static/css/main.0a3220c4.css.map",
+    "main.f7c5af3a.js.map": "/meet-me/static/js/main.f7c5af3a.js.map",
+    "453.82ca1be9.chunk.js.map": "/meet-me/static/js/453.82ca1be9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0a3220c4.css",
+    "static/js/main.f7c5af3a.js"
+  ]
+}
