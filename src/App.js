@@ -11,7 +11,12 @@ const App = () => {
   useEffect(() => {
     // Cargar preguntas desde el archivo JSON
     fetch('/questions.json')
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
       .then((data) => setQuestions(data))
       .catch((error) => console.error('Error al cargar las preguntas:', error));
   }, []);
@@ -57,9 +62,9 @@ const App = () => {
         <>
         <h1>🎉 ¡Felicidades! Has ganado una insignia especial. 🎉</h1>
         <img
-            src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGoxbGwxamRwYnBldmt6MjdremlkYXpzOWE5cHJmMzkzbzFjMXhtYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/f3peFoUG8C2ONoexko/giphy.gif"
+            src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcGoxbGwxamRwYnBldmt6MjdremlkYXpzOWE5cHJmMzkzbzFjMXhtYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/f3peFoUG8C2ONoexko/giphy.gif" // URL del GIF
             alt="Felicidades GIF"
-            style={{ width: '300px', marginTop: '10px' }} // Estilos para ajustar el tamaño y espaciado
+            style={{ width: '300px', marginTop: '10px' }}
           />
         </>
       )}
