@@ -4,27 +4,47 @@ import ProgressBar from './components/ProgressBar';
 
 const App = () => {
   const [questions, setQuestions] = useState([]);
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(null);
+  const [usedQuestions, setUsedQuestions] = useState([]);
   const [points, setPoints] = useState(0);
   const [badgeEarned, setBadgeEarned] = useState(false);
 
   useEffect(() => {
     // Cargar preguntas desde el archivo JSON
     fetch('https://holasoymalva.github.io/meet-me/questions.json')
-      .then((response) => response.json())
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
       .then((data) => setQuestions(data))
       .catch((error) => console.error('Error al cargar las preguntas:', error));
   }, []);
 
   const getRandomQuestionIndex = () => {
-    return Math.floor(Math.random() * questions.length);
+    // Obtener índices de preguntas que no han sido usadas aún
+    const availableQuestions = questions.filter((_, index) => !usedQuestions.includes(index));
+    if (availableQuestions.length === 0) {
+      return null; // Si no quedan preguntas disponibles, devolver null
+    }
+    const randomIndex = Math.floor(Math.random() * availableQuestions.length);
+    const questionIndex = questions.indexOf(availableQuestions[randomIndex]);
+    return questionIndex;
   };
 
   const handleNext = () => {
-    setCurrentQuestionIndex(getRandomQuestionIndex());
+    const nextQuestionIndex = getRandomQuestionIndex();
+    if (nextQuestionIndex !== null) {
+      setCurrentQuestionIndex(nextQuestionIndex);
+      setUsedQuestions([...usedQuestions, nextQuestionIndex]); // Añadir la pregunta al array de usadas
+    } else {
+      alert('Ya no hay más preguntas disponibles.');
+    }
   };
 
   const handleOkey = () => {
+    // Sumar puntos
     setPoints((prevPoints) => {
       const newPoints = prevPoints + 1;
       if (newPoints === 10) {
@@ -33,7 +53,14 @@ const App = () => {
       return newPoints;
     });
 
-    setCurrentQuestionIndex(getRandomQuestionIndex());
+    // Cambiar a una nueva pregunta aleatoria
+    const nextQuestionIndex = getRandomQuestionIndex();
+    if (nextQuestionIndex !== null) {
+      setCurrentQuestionIndex(nextQuestionIndex);
+      setUsedQuestions([...usedQuestions, nextQuestionIndex]); // Añadir la pregunta al array de usadas
+    } else {
+      alert('Ya no hay más preguntas disponibles.');
+    }
   };
 
   return (
