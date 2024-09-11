@@ -54,5 +54,49 @@
     {
        "id":14,
        "question":"Si el dinero y el tiempo no fueran una limitante ¿Qué te gustaria hacer?"
+    },
+    {
+       "id":15,
+       "question":"Si te pudieras describir con una palabra ¿Cuál sería?"
+    },
+    {
+      "id":16,
+      "question":"Si pudieras ser un animal ¿Cuál serias?"
+    },
+    {
+      "id":17,
+      "question":"Si en una caja pudieras guardar tres cosas ¿Cuáles serían?"
+    },
+    {
+      "id":18,
+      "question":"Si pudieras viajar a cualquier lugar del mundo ¿A dónde irías?"
+    },
+    {
+      "id":19,
+      "question":"Si pudieras viajar en el tiempo ¿A qué época irías? ¿Por qué?"
+    },
+    {
+      "id":20,
+      "question":"Si pudieras tener un superpoder ¿Cuál sería?"
+    },
+    {
+      "id":21,
+      "question":"Si pudieras pedir un deseo ¿Qué pedirias?"
+    },
+    {
+      "id":22,
+      "question":"Si pudieras ser una maruchan ¿De que sabor serias?"
+    },
+    {
+      "id":23,
+      "question":"¿Qué te hacia feliz cuando tenias 8 años?"
+    },
+    {
+      "id":24,
+      "question":"Si pudieras ser un pan ¿Que pan serías?"
+    },
+    {
+      "id":25,
+      "question":"Si fueras un taco ¿Que taco serías?"
     }
  ]
